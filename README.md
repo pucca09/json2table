@@ -332,53 +332,10 @@ template = {"name": "build_col_test3",
 ```
 Results:
 
-<table class="table table-bordered table-striped table-condensed">
-    <tr>
-        <td>id</td>
-        <td>language</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>c#</td>
-
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>python</td>
-
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>go</td>
-    </tr>
-
-    <tr>
-        <td>2</td>
-        <td>c++</td>
-
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>python</td>
-
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>vb</td>
-
-    </tr>
-     <tr>
-        <td>3</td>
-        <td>java</td>
-
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>scala</td>
-
-    </tr>
-
-</table>
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 
 #### Example4
@@ -411,59 +368,10 @@ template = {"name": "build_col_test4",
 ```
 Results:
 
-<table class="table table-bordered table-striped table-condensed">
-    <tr>
-        <td>id</td>
-        <td>language</td>
-        <td>grade</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>c#</td>
-        <td>80</td>
-
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>python</td>
-       <td>81</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>go</td>
-        <td>82</td>
-    </tr>
-
-    <tr>
-        <td>2</td>
-        <td>c++</td>
-        <td>90</td>
-
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>python</td>
-        <td>85</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>vb</td>
-        <td>82</td>
-    </tr>
-     <tr>
-        <td>3</td>
-        <td>java</td>
-        <td>90</td>
-
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>scala</td>
-        <td>85</td>
-
-    </tr>
-
-</table>
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 #### Example5
 Template:
@@ -500,64 +408,15 @@ template = {"name": "build_col_test5",
 ```
 Results:
 
-<table class="table table-bordered table-striped table-condensed">
-    <tr>
-        <td>id</td>
-        <td>language</td>
-        <td>grade</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>c#</td>
-        <td>80 point</td>
-
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>python</td>
-       <td>81 point</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>go</td>
-        <td>82 point</td>
-    </tr>
-
-    <tr>
-        <td>2</td>
-        <td>c++</td>
-        <td>90 point</td>
-
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>python</td>
-        <td>85 point</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>vb</td>
-        <td>82 point</td>
-    </tr>
-     <tr>
-        <td>3</td>
-        <td>java</td>
-        <td>90 point</td>
-
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>scala</td>
-        <td>85 point</td>
-
-    </tr>
-
-</table>
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 #### Example6
 Template:
 
-`
+```
 template = {"name": "build_col_test6",
                   "schema": [
                       {
@@ -574,34 +433,10 @@ template = {"name": "build_col_test6",
                           "default":"_REQUIRE_",
                           "value": "v"
                       }]}
-`
+```
 Results:
 
-<table>
-    <tr>
-        <td>id</td>
-        <td>friend</td>
-
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>peter</td>
-
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>rose</td>
-    </tr>
-
-    <tr>
-        <td>2</td>
-        <td>henry</td>
-
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>jane</td>
-    </tr>
-
-   
-</table>
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
