@@ -554,9 +554,10 @@ Results:
 
 </table>
 
-####Example6
+#### Example6
 Template:
-```
+
+`
 template = {"name": "build_col_test6",
                   "schema": [
                       {
@@ -573,10 +574,10 @@ template = {"name": "build_col_test6",
                           "default":"_REQUIRE_",
                           "value": "v"
                       }]}
-```
+`
 Results:
 
-<table class="table table-bordered table-striped table-condensed">
+<table>
     <tr>
         <td>id</td>
         <td>friend</td>
@@ -604,8 +605,3 @@ Results:
 
    
 </table>
-|Tables         | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
