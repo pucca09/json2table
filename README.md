@@ -102,7 +102,7 @@ Data is provided with a list of dict. You can use the function of JSON module to
                         }
 
         },
-    	"gender":"male",
+      "gender":"male",
         "friends":[
             {"name":"peter",
              "intimacy":{
@@ -228,7 +228,7 @@ Results:
     </tr>
     <tr>
         <td>1</td>
-	    <td>john</td>
+      <td>john</td>
         <td>27</td>
     </tr>
     <tr>
@@ -245,6 +245,7 @@ Results:
 
 #### Example2
 Template:
+
 ```
 template = {"name":"build_col_test2",
                   "schema":[
@@ -305,7 +306,7 @@ Results:
         <td>10</td>
         <td>ibm</td>
     </tr>
-
+    
 </table>
 
 ####Example3
@@ -338,18 +339,18 @@ Results:
     <tr>
         <td>1</td>
         <td>c#</td>
-
+       
     </tr>
     <tr>
         <td>1</td>
         <td>python</td>
-
+       
     </tr>
     <tr>
         <td>1</td>
-        <td>go</td>
+        <td>go</td>  
     </tr>
-
+    
     <tr>
         <td>2</td>
         <td>c++</td>
@@ -375,7 +376,7 @@ Results:
         <td>scala</td>
 
     </tr>
-
+   
 </table>
 
 
@@ -418,7 +419,7 @@ Results:
         <td>1</td>
         <td>c#</td>
         <td>80</td>
-
+       
     </tr>
     <tr>
         <td>1</td>
@@ -430,7 +431,7 @@ Results:
         <td>go</td>
         <td>82</td>
     </tr>
-
+    
     <tr>
         <td>2</td>
         <td>c++</td>
@@ -459,7 +460,7 @@ Results:
         <td>85</td>
 
     </tr>
-
+   
 </table>
 
 ####Example5
@@ -505,7 +506,7 @@ Results:
         <td>1</td>
         <td>c#</td>
         <td>80 point</td>
-
+       
     </tr>
     <tr>
         <td>1</td>
@@ -517,7 +518,7 @@ Results:
         <td>go</td>
         <td>82 point</td>
     </tr>
-
+    
     <tr>
         <td>2</td>
         <td>c++</td>
@@ -546,7 +547,7 @@ Results:
         <td>85 point</td>
 
     </tr>
-
+   
 </table>
 
 ####Example6
@@ -574,12 +575,12 @@ Results:
     <tr>
         <td>id</td>
         <td>friend</td>
-
+       
     </tr>
     <tr>
         <td>1</td>
         <td>peter</td>
-
+       
     </tr>
     <tr>
         <td>1</td>
@@ -595,6 +596,6 @@ Results:
         <td>2</td>
         <td>jane</td>
     </tr>
-
+   
    
 </table>
