@@ -190,7 +190,7 @@ tabel_records = bd.export_to_db(json_list)
 
 ```
 
-####Example1
+#### Example1
 Template:
 ```
 params = {"name":"build_col_test1",
@@ -306,11 +306,12 @@ Results:
         <td>10</td>
         <td>ibm</td>
     </tr>
-    
+
 </table>
 
-####Example3
+#### Example3
 Template:
+
 ```
 template = {"name": "build_col_test3",
                   "schema": [
@@ -339,18 +340,18 @@ Results:
     <tr>
         <td>1</td>
         <td>c#</td>
-       
+
     </tr>
     <tr>
         <td>1</td>
         <td>python</td>
-       
+
     </tr>
     <tr>
         <td>1</td>
-        <td>go</td>  
+        <td>go</td>
     </tr>
-    
+
     <tr>
         <td>2</td>
         <td>c++</td>
@@ -376,11 +377,11 @@ Results:
         <td>scala</td>
 
     </tr>
-   
+
 </table>
 
 
-####Example4
+#### Example4
 Template:
 ```
 template = {"name": "build_col_test4",
@@ -407,6 +408,7 @@ template = {"name": "build_col_test4",
                           "value": "v"
                       }
                   ]}
+```
 Results:
 
 <table class="table table-bordered table-striped table-condensed">
@@ -419,7 +421,7 @@ Results:
         <td>1</td>
         <td>c#</td>
         <td>80</td>
-       
+
     </tr>
     <tr>
         <td>1</td>
@@ -431,7 +433,7 @@ Results:
         <td>go</td>
         <td>82</td>
     </tr>
-    
+
     <tr>
         <td>2</td>
         <td>c++</td>
@@ -460,11 +462,12 @@ Results:
         <td>85</td>
 
     </tr>
-   
+
 </table>
 
-####Example5
+#### Example5
 Template:
+
 ```
 template = {"name": "build_col_test5",
                   "schema": [
@@ -494,6 +497,7 @@ template = {"name": "build_col_test5",
                           "value": "v"
                       }
                   ]}
+```
 Results:
 
 <table class="table table-bordered table-striped table-condensed">
@@ -506,7 +510,7 @@ Results:
         <td>1</td>
         <td>c#</td>
         <td>80 point</td>
-       
+
     </tr>
     <tr>
         <td>1</td>
@@ -518,7 +522,7 @@ Results:
         <td>go</td>
         <td>82 point</td>
     </tr>
-    
+
     <tr>
         <td>2</td>
         <td>c++</td>
@@ -547,7 +551,7 @@ Results:
         <td>85 point</td>
 
     </tr>
-   
+
 </table>
 
 ####Example6
@@ -569,18 +573,19 @@ template = {"name": "build_col_test6",
                           "default":"_REQUIRE_",
                           "value": "v"
                       }]}
+```
 Results:
 
 <table class="table table-bordered table-striped table-condensed">
     <tr>
         <td>id</td>
         <td>friend</td>
-       
+
     </tr>
     <tr>
         <td>1</td>
         <td>peter</td>
-       
+
     </tr>
     <tr>
         <td>1</td>
@@ -596,6 +601,6 @@ Results:
         <td>2</td>
         <td>jane</td>
     </tr>
-   
+
    
 </table>
