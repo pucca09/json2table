@@ -102,7 +102,7 @@ Data is provided with a list of dict. You can use the function of JSON module to
                         }
 
         },
-      "gender":"male",
+        "gender":"male",
         "friends":[
             {"name":"peter",
              "intimacy":{
