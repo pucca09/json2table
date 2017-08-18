@@ -220,28 +220,12 @@ params = {"name":"build_col_test1",
 ```
 Results:
 
-<table class="table table-bordered table-striped table-condensed">
-    <tr>
-        <td>id</td>
-        <td>first_name</td>
-        <td>age</td>
-    </tr>
-    <tr>
-        <td>1</td>
-      <td>john</td>
-        <td>27</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>scott</td>
-        <td>29</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>tom</td>
-        <td>10</td>
-    </tr>
-</table>
+id | first_name | age
+-- | ---------|------
+1 | john | 27
+2 | scott | 29
+3 | tom | 10
+
 
 #### Example2
 Template:
@@ -281,33 +265,12 @@ template = {"name":"build_col_test2",
 ```
 Results:
 
-<table class="table table-bordered table-striped table-condensed">
-    <tr>
-        <td>id</td>
-        <td>first_name</td>
-        <td>age</td>
-        <td>company</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>john</td>
-        <td>27</td>
-        <td>ibm</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>scott</td>
-        <td>29</td>
-        <td>ibm</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>tom</td>
-        <td>10</td>
-        <td>ibm</td>
-    </tr>
+id | first_name | age | company
+-- | ---------|----|-----
+1 | john | 27 | ibm
+2 | scott | 29 | ibm
+3 | tom | 10 | ibm
 
-</table>
 
 #### Example3
 Template:
@@ -332,10 +295,16 @@ template = {"name": "build_col_test3",
 ```
 Results:
 
-First Header | Second Header
+id | language
 ------------ | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+1 | c#
+1 | python
+1 | go
+2 | c++
+2 | python
+2 | vb
+3 | java
+2 | scala
 
 
 #### Example4
@@ -368,10 +337,16 @@ template = {"name": "build_col_test4",
 ```
 Results:
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+id | language | grade
+-- | ---------|------
+1 | c# | 80
+1 | python | 81
+1 | go | 82
+2 | c++ | 90
+2 | python | 85
+2 | vb | 82
+3 | java | 90
+2 | scala | 85
 
 #### Example5
 Template:
@@ -408,10 +383,16 @@ template = {"name": "build_col_test5",
 ```
 Results:
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+id | language | grade
+-- | ---------|------
+1 | c# | 80 point
+1 | python | 81 point
+1 | go | 82 point
+2 | c++ | 90 point
+2 | python | 85 point
+2 | vb | 82 point
+3 | java | 90 point
+2 | scala | 85 point
 
 #### Example6
 Template:
@@ -436,7 +417,9 @@ template = {"name": "build_col_test6",
 ```
 Results:
 
-First Header | Second Header
+id | friend
 ------------ | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+1 | peter
+1 | python | 81 pointrose
+2 | henry
+2 | jane
