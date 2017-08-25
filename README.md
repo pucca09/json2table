@@ -1,7 +1,7 @@
 <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
 
 # json2table
-flattens the nested json object, extracts the properties into a csv format and restore into MongoDB collection
+flattens the nested json object, convert an array of non-hierarchial json objects to table-format data
 
 ### Installation
 ```
@@ -16,7 +16,7 @@ First of all, you need to provide a template describing the schema of the collec
 
 
 ```
-template = {"name": "build_col_test9",
+template = {
                   "schema": [
                       {
                           "column_name": "id",
@@ -55,10 +55,9 @@ template = {"name": "build_col_test9",
 
 #### Anotation
 
-* **"name"** : MongoDB collection name
-* **"schema"**:schema for MongoDB collection
+* **"schema"**:schema for a table-format data
 * **"schema"-"column_name"**: column name
-* **"schema"-"path"**: join by "*"
+* **"schema"-"path"**: json path joined with "*"
 * **"schema"-"privilege"**:if the path doesn't include variable symbol such as $VAL,$NUM, then the privilege of the column is '_CONSTANT_',else '_VARIABLE_'
 * **"schema"-"default"**: fill the missing value with default value, unless the type being '_REQUIRE_'. If "default" is set to be '_REQUIRE_',rows with this column value missed will be deleted
 * **"schema"-"value"**:extract the column value from json key or value. 'k' stands for json key,'v' for single value,'array' for values list
@@ -106,13 +105,13 @@ Data is provided with a list of dict. You can use the function of JSON module to
         "friends":[
             {"name":"peter",
              "intimacy":{
-                 "hobby":["swim","football"],
+                 "hobby":["swimming","football"],
                  "age_diff":"2"
                 }
              },
             {"name":"rose",
                  "intimacy":{
-                     "hobby":["swim"],
+                     "hobby":["swimming"],
                      "age_diff":"3"
                     }
                  }
@@ -150,7 +149,7 @@ Data is provided with a list of dict. You can use the function of JSON module to
              },
             {"name":"jane",
                  "intimacy":{
-                     "hobby":["sing"],
+                     "hobby":["singing"],
                      "age_diff":"3"
                     }
                  }
@@ -183,17 +182,22 @@ Data is provided with a list of dict. You can use the function of JSON module to
 from json2table.building import BuildTable
 bd = BuildTabel(template) #create instance with template
 json_list = json.load(open('data\example',"w"))
-#only extration
+#extration
 table_records = bd.extraction(json_list)
-#extraction values and export to MongoDB
-tabel_records = bd.export_to_db(json_list)
 
 ```
-
+After extraction, you can export data to DB or transform into Pandas.Dataframe
+```
+# Assume that 'db' is an instance of pymongo client
+db[collection_name].insert_many(table_records)
+# Transform into Pandas.Dataframe
+import pandas as pds
+df = pds.Dataframe(table_records)
+```
 #### Example1
 Template:
 ```
-params = {"name":"build_col_test1",
+params = {
                   "schema":[
                   {
                     "column_name":"id",
@@ -231,7 +235,7 @@ id | first_name | age
 Template:
 
 ```
-template = {"name":"build_col_test2",
+template = {
                   "schema":[
                   {
                     "column_name":"id",
@@ -276,7 +280,7 @@ id | first_name | age | company
 Template:
 
 ```
-template = {"name": "build_col_test3",
+template = {
                   "schema": [
                       {
                           "column_name": "id",
@@ -310,7 +314,7 @@ id | language
 #### Example4
 Template:
 ```
-template = {"name": "build_col_test4",
+template = {
                   "schema": [
                       {
                           "column_name": "id",
@@ -352,7 +356,7 @@ id | language | grade
 Template:
 
 ```
-template = {"name": "build_col_test5",
+template = {
                   "schema": [
                       {
                           "column_name": "id",
@@ -398,7 +402,7 @@ id | language | grade
 Template:
 
 ```
-template = {"name": "build_col_test6",
+template = {
                   "schema": [
                       {
                           "column_name": "id",
@@ -420,6 +424,48 @@ Results:
 id | friend
 ------------ | -------------
 1 | peter
-1 | python | 81 pointrose
+1 | rose
 2 | henry
 2 | jane
+
+#### Example7
+Template:
+
+```
+template = {
+                  "schema": [
+                      {
+                          "column_name": "id",
+                          "path": "id",
+                          "privilege": "_CONSTANT_",
+                          "default": "_REQUIRE_",
+                          "value": "v"
+                      },
+                      {
+                          "column_name": "friend",
+                          "path": "friends*$NUM*name",
+                          "privilege": "_VARIABLE_",
+                          "default":"_REQUIRE_",
+                          "value": "v"
+                      },
+                      {
+                          "column_name": "hobby",
+                          "path": "friends*$NUM*intimacy*hobby",
+                          "privilege": "_VARIABLE_",
+                          "default": "",
+                          "value": "array",
+                          "replace":{
+                              "pattern":"$VAL",
+                              "sub":"$QUOTg$LT1$GT ==="
+                          }
+                      }
+                  ]}
+```
+Results:
+
+id | friend | hobby
+------------ | -------------
+1 | peter | ["swimming","football"]
+1 | rose | ["swimming"]
+2 | henry | ["dance","football"]
+2 | jane | ["singing"]
