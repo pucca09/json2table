@@ -55,7 +55,7 @@ template = {
 
 ### Anotation
 
-####1.Explaination of Params
+#### 1.Explaination of Params
 
 * **"schema"**:schema for a table-format data
 * **"schema"-"column_name"**: column name
@@ -76,7 +76,7 @@ The json format does not support some special characters, so some symbols are de
 + **$GT** => ">"
 + **$LT** => "<"
 
-####3.Json Path
+#### 3.Json Path
 Example:
 ```
 json_object ={
