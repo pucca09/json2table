@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+json2table/__init__.py
+json2table/building.py
+json2table/flatten_json.py
+json2table.egg-info/PKG-INFO
+json2table.egg-info/SOURCES.txt
+json2table.egg-info/dependency_links.txt
+json2table.egg-info/requires.txt
+json2table.egg-info/top_level.txt

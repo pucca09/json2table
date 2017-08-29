@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: json2table
+Version: 1.0
+Summary: Parse nested json object to table data
+Home-page: UNKNOWN
+Author: Chen Qingqing
+Author-email: chenqingqing0927@163.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: json,flatten,pandas,table,csv
+Platform: UNKNOWN
