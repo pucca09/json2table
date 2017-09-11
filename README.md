@@ -498,10 +498,10 @@ Results:
 
 id | friend | hobby
 ------------ | ------------- | ---------
-1 | peter | ["swimming","football"]
-1 | rose | ["swimming"]
-2 | henry | ["dance","football"]
-2 | jane | ["singing"]
+1 | peter | ["swimming ===","football ==="]
+1 | rose | ["swimming ==="]
+2 | henry | ["dance ===","football ==="]
+2 | jane | ["singing ==="]
 
 
 ## Contact Author
